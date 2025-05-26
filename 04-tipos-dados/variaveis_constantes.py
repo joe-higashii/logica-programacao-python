@@ -43,8 +43,10 @@ print(f"Dias Úteis: {DIAS_UTEIS}")
 print(f"Erro: {MENSAGEM_ERRO}")
 
 # Tentativa de Reatribuição (não recomendado)
-TAXA_JUROS = 0.02  # Funciona, mas fere a convenção
-print(f"\nNova Taxa (não recomendado): {TAXA_JUROS}")
+# Em Python, constantes são apenas uma convenção. Reatribuir uma constante, como abaixo, é possível,
+# mas deve ser evitado para manter a clareza e a consistência do código.
+nova_taxa_juros = 0.02  # Simulação de uma nova taxa, sem alterar a constante original
+print(f"\nNova Taxa (simulada, não recomendado alterar constantes): {nova_taxa_juros}")
 
 """
 Observações:
