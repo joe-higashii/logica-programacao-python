@@ -13,12 +13,12 @@ print("--- Demonstração de Estruturas de Decisão ---")
 print("\n--- Exemplo 1: `if` (Decisão Simples) ---")
 idade = int(input("Digite sua idade: "))
 
-if idade >= 18:
-    print("Você é maior de idade.")
-    # Este bloco só executa se a condição (idade >= 18) for verdadeira.
-
 if idade < 0:
     print("Idade inválida!")
+else:
+    if idade >= 18:
+        print("Você é maior de idade.")
+        # Este bloco só executa se a condição (idade >= 18) for verdadeira.
 
 # Exemplo 2: Estrutura `if-else` (Decisão Composta)
 print("\n--- Exemplo 2: `if-else` (Decisão Composta) ---")
