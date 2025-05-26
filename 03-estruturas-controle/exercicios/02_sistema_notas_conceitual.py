@@ -18,7 +18,7 @@ try:
     # Processamento e Decisão Encadeada
     conceito = "" # Inicializa a variável conceito
 
-    if nota < 0 or nota > 100:
+    if not (0 <= nota <= 100):
         conceito = "Nota inválida. Por favor, insira um valor entre 0 e 100."
     elif nota >= 90:
         conceito = "A (Excelente)"
