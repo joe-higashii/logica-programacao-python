@@ -35,15 +35,15 @@ print("\n--- Exemplo 3: `if-elif-else` (Decisão Encadeada) ---")
 # Baseado no exemplo de sistema de notas que o material do curso provavelmente tem.
 nota = float(input("Digite a nota do aluno (0 a 10): "))
 
-if nota >= 9.0 and nota <= 10.0:
+if 9.0 <= nota <= 10.0:
     conceito = "A (Excelente)"
-elif nota >= 7.0 and nota < 9.0:
+elif 7.0 <= nota < 9.0:
     conceito = "B (Bom)"
-elif nota >= 5.0 and nota < 7.0:
+elif 5.0 <= nota < 7.0:
     conceito = "C (Regular)"
-elif nota >= 3.0 and nota < 5.0:
+elif 3.0 <= nota < 5.0:
     conceito = "D (Insuficiente)"
-elif nota >= 0.0 and nota < 3.0:
+elif 0.0 <= nota < 3.0:
     conceito = "F (Reprovado)"
 else:
     conceito = "Nota inválida! Deve ser entre 0 e 10."
