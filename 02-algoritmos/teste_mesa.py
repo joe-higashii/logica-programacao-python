@@ -1,19 +1,15 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+# Teste de mesa para cálculo de média
+def teste_mesa_media():
+    testes = [
+        {"n1": 6.0, "n2": 8.0, "esperado": "Aprovado"},
+        {"n1": 4.5, "n2": 3.5, "esperado": "Reprovado"},
+        {"n1": 7.0, "n2": 7.0, "esperado": "Aprovado"}
+    ]
 
-"""
-Módulo: Exemplos de Teste de Mesa
-Descrição: Este arquivo contém exemplos e exercícios relacionados a exemplos de teste de mesa.
-Autor: [Seu Nome]
-Data: 2025-05-26
-"""
-
-def main():
-    """Função principal para demonstração do módulo."""
-    print(f"Executando exemplos de Exemplos de Teste de Mesa...")
-    # Adicione seu código e exemplos aqui
-    # Exemplo:
-    # print("Olá, mundo da Lógica de Programação!")
+    for i, teste in enumerate(testes, 1):
+        media = (teste["n1"] + teste["n2"]) / 2
+        resultado = "Aprovado" if media >= 7 else "Reprovado"
+        print(f"Teste {i}: Entrada ({teste['n1']}, {teste['n2']}) | Esperado: {teste['esperado']} | Obtido: {resultado}")
 
 if __name__ == "__main__":
-    main()
+    teste_mesa_media()
