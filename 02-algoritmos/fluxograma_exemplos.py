@@ -1,19 +1,53 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+# Exemplo 1: Fluxograma de decisão para aprovação
+def fluxograma_aprovacao():
+    print("""
+    [Início]
+      |
+      V
+    Leia N1, N2
+      |
+      V
+    Média = (N1 + N2)/2
+      |
+      V
+    +----[Média >= 7]----+
+    |                    |
+    V                    V
+  "Aprovado"         "Reprovado"
+      |                    |
+      +--------+-----------+
+               |
+               V
+            [Fim]
+    """)
 
-"""
-Módulo: Exemplos de Fluxogramas (descritos ou simulados)
-Descrição: Este arquivo contém exemplos e exercícios relacionados a exemplos de fluxogramas (descritos ou simulados).
-Autor: [Seu Nome]
-Data: 2025-05-26
-"""
-
-def main():
-    """Função principal para demonstração do módulo."""
-    print(f"Executando exemplos de Exemplos de Fluxogramas (descritos ou simulados)...")
-    # Adicione seu código e exemplos aqui
-    # Exemplo:
-    # print("Olá, mundo da Lógica de Programação!")
+# Exemplo 2: Fluxograma para soma de 1 a 100
+def fluxograma_soma():
+    print("""
+    [Início]
+      |
+      V
+    Soma = 0
+    Contador = 1
+      |
+      V
+    +--[Contador <= 100]--+
+    |                     |
+    V                     |
+  Soma += Contador        |
+    |                     |
+    V                     |
+  Contador +=1            |
+    |                     |
+    +---------------------+
+               |
+               V
+          Escreva Soma
+               |
+               V
+            [Fim]
+    """)
 
 if __name__ == "__main__":
-    main()
+    fluxograma_aprovacao()
+    fluxograma_soma()
