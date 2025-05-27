@@ -79,11 +79,9 @@ class Smartphone:
             self.__sistema_operacional = novo_so
             print(f"Sistema operacional de {self.modelo} definido para {novo_so}.")
         else:
-            # Ao invés de printar, em um sistema real, poderíamos levantar uma exceção.
-            print(f"Erro: '{novo_so}' não é um sistema operacional válido para este smartphone.")
-            # Se fosse um erro crítico no construtor, poderíamos levantar ValueError aqui.
-            if self.__sistema_operacional is None: # Se ainda não tem SO válido
-                 raise ValueError(f"Sistema operacional inicial '{novo_so}' inválido.")
+            # Levantando uma exceção para entradas inválidas, garantindo consistência.
+            raise ValueError(f"Erro: '{novo_so}' não é um sistema operacional válido para este smartphone.")
+            # Se fosse um erro crítico no construtor, o mesmo tratamento será aplicado.
 
 # --- Demonstração com Smartphone ---
 print("\n--- Usando a classe Smartphone ---")
