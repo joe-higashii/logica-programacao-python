@@ -138,9 +138,15 @@ try:
     # Tentando acessar o atributo _saldo diretamente (possível, mas quebra encapsulamento)
     print("\n--- Acesso direto ao atributo _saldo (não recomendado) ---")
     print(f"Saldo interno de João (antes): R${conta1._saldo:.2f}")
-    conta1._saldo = -5000.00 # Modificando diretamente, burlando validações dos métodos
-    print(f"Saldo interno de João (depois da alteração direta e indevida): R${conta1._saldo:.2f}")
-    conta1.exibir_extrato() # O extrato refletirá o saldo negativo
+    # Demonstrando os riscos de modificar diretamente o atributo protegido:
+    # Embora seja tecnicamente possível, isso quebra o encapsulamento e pode levar a estados inválidos.
+    print("Se tentássemos modificar _saldo diretamente, poderíamos causar inconsistências.")
+    print("Por exemplo, um saldo negativo poderia ser definido, o que não é permitido pelos métodos da classe.")
+    # Exemplo de como o saldo deve ser alterado corretamente:
+    try:
+        conta1.saldo = -5000.00 # O setter impede essa operação
+    except ValueError as e:
+        print(f"Erro ao tentar definir saldo negativo: {e}")
 
 except (ValueError, TypeError) as e_main:
     print(f"Ocorreu um erro principal: {e_main}")
