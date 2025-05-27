@@ -117,7 +117,6 @@ class Circulo(FormaGeometrica):
         self.raio = raio
 
     def area(self): # Sobrescreve o método area
-        import math
         return math.pi * (self.raio ** 2)
 
     def descrever(self): # Sobrescreve
